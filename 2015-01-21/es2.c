@@ -1,3 +1,18 @@
+/*Il secondo esercizio estende il primo. Il file passato come parametro in questo caso ha un numero arbitario di righe
+e non solo due come nell'esercizio1. Ogni riga contiene un comando con I rispettivi parametri. Il programma deve
+attivare tutti I comandi del file in modo concorrente, e terminare quando tutti finiscono.
+L'output di tutti I comandi, tranne l'ultimo, deve essere fornito in input all'ultimo comando (quello nell'ultima riga
+significativa del file).
+Es: se il file contenesse:
+ls -l
+ls -l
+ls -l
+cat
+l'output dovrebbe essere la lista dei file della corrente directory 3 volte (nell'output puo' capitare che righe di
+comandi diversi vengano frapposte, l'accesso alla pipe e' conteso).
+*/
+
+
 #include<unistd.h>
 #include<fcntl.h>
 #include<stdio.h>
