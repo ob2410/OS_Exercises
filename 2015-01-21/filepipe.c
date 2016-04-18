@@ -1,3 +1,17 @@
+/*Scrivere un programma C di nome filepipe che abbia come unico parametro il pathnae di un file di testo.
+Questo file contiene due comandi con I rispettivi parametri, uno per riga.
+Il programma deve mettere in esecuzione concorrente I due comandi in modo che l'output del primo venga fornito
+come input del secondo usando una pipe.
+Il programma deve terminare quando entrambi I comandi sono terminati.
+Esempio: se il file ffff contiene:
+ls -l
+tac
+il comando:
+filepipe ffff
+deve restituire lo stesso output del comando:
+ls -l | tac
+*/
+
 #include<unistd.h>
 #include<fcntl.h>
 #include<stdio.h>
